@@ -7,8 +7,8 @@ import currencies from '../data/currencies';
 export default function CurrencyInput(props) {
 	return (
 		<Container>
-			<Row className="justify-content-md-center">
-				<Col sm={2}>
+			<Row>
+				<Col xs={3}>
 				 	<TextField
 						type='number'
 						variant='outlined'
@@ -16,7 +16,7 @@ export default function CurrencyInput(props) {
 						inputProps={{readOnly: props.readOnly}}
             			fullWidth />
 				</Col>
-				<Col sm={5}>
+				<Col xs={9}>
 				 	<Autocomplete
 						options={currencies}
 						getOptionLabel={option => option.code}

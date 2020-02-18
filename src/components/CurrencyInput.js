@@ -20,7 +20,13 @@ export default function CurrencyInput(props) {
 				 	<Autocomplete
 						options={currencies}
 						getOptionLabel={option => option.code}
-						renderOption={option => option.code}
+						renderOption={option => (
+							<React.Fragment>
+								<b>{option.code}</b>
+								<span>&nbsp;&nbsp;</span>
+								{option.name}
+							</React.Fragment>
+						)}
 						renderInput={params => (
 						  <TextField
 							{...params}

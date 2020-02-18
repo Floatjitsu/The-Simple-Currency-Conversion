@@ -3,7 +3,7 @@ import {Container, Row, Col} from 'react-bootstrap';
 import {TextField} from '@material-ui/core';
 import Autocomplete from '@material-ui/lab/Autocomplete'
 
-export default function CurrencyInput() {
+export default function CurrencyInput(props) {
 	return (
 			<Container>
 				<Row className="justify-content-md-center">
@@ -12,6 +12,7 @@ export default function CurrencyInput() {
 							type='number'
 							variant='outlined'
 							defaultValue={'1.00'}
+							inputProps={{readOnly: props.readOnly}}
                 			fullWidth />
 					</Col>
 					<Col sm={5}>

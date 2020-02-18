@@ -4,9 +4,9 @@ import CurrencyInput from './CurrencyInput';
 export default function CurrencyConverter() {
 	return (
 		<div className='CurrencyConverter'>
-			<CurrencyInput/>
+			<CurrencyInput readOnly={false}/>
 			<div style={{marginTop: 10}}/>
-			<CurrencyInput/>
+			<CurrencyInput readOnly={true}/>
 		</div>
 	);
 };

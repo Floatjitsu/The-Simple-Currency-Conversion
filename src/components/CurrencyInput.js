@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 import {TextField} from '@material-ui/core';
 import Autocomplete from '@material-ui/lab/Autocomplete'
 import currencies from '../data/currencies';
 
 export default function CurrencyInput(props) {
+
+	const [currencyName, setCurrencyName] = useState(currencies.find(element => element.code === props.defaultValue));
+
 	return (
 		<Container>
 			<Row>
@@ -18,7 +21,7 @@ export default function CurrencyInput(props) {
 				</Col>
 				<Col xs={9}>
 				 	<Autocomplete
-						defaultValue={currencies.find(element => element.code === props.defaultValue)}
+						defaultValue={currencyName}
 						options={currencies}
 						getOptionLabel={option => option.code}
 						renderOption={option => (

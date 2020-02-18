@@ -18,6 +18,7 @@ export default function CurrencyInput(props) {
 				</Col>
 				<Col xs={9}>
 				 	<Autocomplete
+						defaultValue={currencies.find(element => element.code === props.defaultValue)}
 						options={currencies}
 						getOptionLabel={option => option.code}
 						renderOption={option => (

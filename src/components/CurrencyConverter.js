@@ -4,6 +4,9 @@ import Button from '@material-ui/core/Button';
 
 export default function CurrencyConverter() {
 
+	const [sourceCurrencyName, setSourceCurrencyName] = useState('EUR');
+	const [targetCurrencyName, setTargetCurrencyName] = useState('USD');
+
 	const sourceCurrency = {
 		nameChange: function(currencyName) {
 			console.log('SOURCE: ' + currencyName);
@@ -28,13 +31,13 @@ export default function CurrencyConverter() {
 		<div className='CurrencyConverter'>
 			<CurrencyInput
 				readOnly={false}
-				defaultValue={'EUR'}
+				defaultValue={sourceCurrencyName}
 				currencyNameInputChangeCallBack={sourceCurrency.nameChange}
 				currencyValueInputChangeCallBack={sourceCurrency.valueChange}/>
 			<div style={{marginTop: 10}}/>
 			<CurrencyInput
 				readOnly={true}
-				defaultValue={'USD'}
+				defaultValue={targetCurrencyName}
 				currencyNameInputChangeCallBack={targetCurrency.nameChange}
 				currencyValueInputChangeCallBack={targetCurrency.valueChange}/>
 			<div style={{marginTop: 10}}/>

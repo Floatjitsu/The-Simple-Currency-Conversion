@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete'
@@ -6,10 +6,9 @@ import currencies from '../data/currencies';
 
 export default function CurrencyInput(props) {
 	const defaultCurrencyName = currencies.find(element => element.code === props.defaultValue);
-	const [currencyName, setCurrencyName] = useState();
 
 	const onCurrencyNameInputChange = (event, value) => {
-		props.currencyNameInputChangeCallBack(value);
+		props.currencyNameInputChangeCallBack(value.code);
 	};
 
 	const onCurrencyValueInputChange = event => {
@@ -33,7 +32,7 @@ export default function CurrencyInput(props) {
 						defaultValue={defaultCurrencyName}
 						options={currencies}
 						getOptionLabel={option => option.code}
-						onInputChange={onCurrencyNameInputChange}
+						onChange={onCurrencyNameInputChange}
 						renderOption={option => (
 							<React.Fragment>
 								<b>{option.code}</b>

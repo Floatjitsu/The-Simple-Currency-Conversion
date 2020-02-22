@@ -1,12 +1,17 @@
 import React, {useState} from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
-import {TextField} from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete'
 import currencies from '../data/currencies';
 
 export default function CurrencyInput(props) {
+	const defaultCurrencyName = currencies.find(element => element.code === props.defaultValue);
+	const [currencyName, setCurrencyName] = useState();
 
-	const [currencyName, setCurrencyName] = useState(currencies.find(element => element.code === props.defaultValue));
+	const onCurrencyNameInputChange = (event, value) => {
+		// setCurrencyName(value);
+		props.inputChangeCallBack(value);
+	};
 
 	return (
 		<Container>
@@ -21,9 +26,10 @@ export default function CurrencyInput(props) {
 				</Col>
 				<Col xs={9}>
 				 	<Autocomplete
-						defaultValue={currencyName}
+						defaultValue={defaultCurrencyName}
 						options={currencies}
 						getOptionLabel={option => option.code}
+						onInputChange={onCurrencyNameInputChange}
 						renderOption={option => (
 							<React.Fragment>
 								<b>{option.code}</b>

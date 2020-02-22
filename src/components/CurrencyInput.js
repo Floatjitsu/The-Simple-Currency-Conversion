@@ -9,8 +9,11 @@ export default function CurrencyInput(props) {
 	const [currencyName, setCurrencyName] = useState();
 
 	const onCurrencyNameInputChange = (event, value) => {
-		// setCurrencyName(value);
-		props.inputChangeCallBack(value);
+		props.currencyNameInputChangeCallBack(value);
+	};
+
+	const onCurrencyValueInputChange = event => {
+		props.currencyValueInputChangeCallBack(event.target.value);
 	};
 
 	return (
@@ -22,6 +25,7 @@ export default function CurrencyInput(props) {
 						variant='outlined'
 						defaultValue={'1.00'}
 						inputProps={{readOnly: props.readOnly}}
+						onChange={onCurrencyValueInputChange}
             			fullWidth />
 				</Col>
 				<Col xs={9}>

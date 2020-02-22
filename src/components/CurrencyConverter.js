@@ -9,7 +9,7 @@ export default function CurrencyConverter() {
 
 	const sourceCurrency = {
 		nameChange: function(currencyName) {
-			console.log('SOURCE: ' + currencyName);
+			setSourceCurrencyName(currencyName);
 		},
 
 		valueChange: function(value) {
@@ -19,7 +19,7 @@ export default function CurrencyConverter() {
 
 	const targetCurrency = {
 		nameChange: function(currencyName) {
-			console.log('TARGET: ' + currencyName);
+			setTargetCurrencyName(currencyName);
 		},
 
 		valueChange: function(value) {

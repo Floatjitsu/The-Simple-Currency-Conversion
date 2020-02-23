@@ -13,7 +13,7 @@ const initialize = (fromCurrency, toCurrency) => {
 
 const convert = value => {
 	return new Promise((resolve, reject) => {
-		_setConversionRate().then(result => resolve(_conversionRate * value));
+		_setConversionRate().then(result => resolve(_calculateConvertedValue(value)));
 	});
 };
 
@@ -43,6 +43,10 @@ const _buildApiParams = () => {
 			symbols: _targetCurrencyName
 		}
 	};
-}
+};
+
+const _calculateConvertedValue = value => {
+	return Math.round((value * _conversionRate) * 100) / 100;
+};
 
 export default {initialize, convert, setSourceCurrency, setTargetCurrency};

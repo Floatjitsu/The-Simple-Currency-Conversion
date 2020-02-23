@@ -1,21 +1,24 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import CurrencyInput from './CurrencyInput';
 import Button from '@material-ui/core/Button';
 import currencyConversion from '../modules/currencyConversion';
 
 export default function CurrencyConverter() {
 
-	const [sourceCurrencyName, setSourceCurrencyName] = useState('EUR');
+	const [sourceCurrencyName] = useState('EUR');
 	const [sourceCurrencyValue, setSourceCurrencyValue] = useState(1.00);
 
-	const [targetCurrencyName, setTargetCurrencyName] = useState('USD');
+	const [targetCurrencyName] = useState('USD');
 	const [targetCurrencyValue, setTargetCurrencyValue] = useState(1.00);
 
 	currencyConversion.initialize(sourceCurrencyName, targetCurrencyName);
 
+	useEffect(() => {
+		_convert();
+	}, []);
+
 	const sourceCurrency = {
 		nameChange: function(currencyName) {
-			// setSourceCurrencyName(currencyName);
 			currencyConversion.setSourceCurrency(currencyName);
 		},
 
@@ -26,7 +29,6 @@ export default function CurrencyConverter() {
 
 	const targetCurrency = {
 		nameChange: function(currencyName) {
-			// setTargetCurrencyName(currencyName);
 			currencyConversion.setTargetCurrency(currencyName);
 		},
 
@@ -36,6 +38,10 @@ export default function CurrencyConverter() {
 	};
 
 	const onConvertButtonClick = () => {
+		_convert();
+	};
+
+	const _convert = () => {
 		currencyConversion.convert(sourceCurrencyValue).then(result => setTargetCurrencyValue(result));
 	};
 

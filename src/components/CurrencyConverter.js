@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import CurrencyInput from './CurrencyInput';
 import Button from '@material-ui/core/Button';
+import currencyConversion from '../modules/currencyConversion';
 
 export default function CurrencyConverter() {
 
@@ -9,6 +10,8 @@ export default function CurrencyConverter() {
 
 	const [targetCurrencyName, setTargetCurrencyName] = useState('USD');
 	const [targetCurrencyValue, setTargetCurrencyValue] = useState(1.00);
+
+	currencyConversion.initialize(sourceCurrencyName, targetCurrencyName);
 
 	const sourceCurrency = {
 		nameChange: function(currencyName) {
@@ -32,7 +35,8 @@ export default function CurrencyConverter() {
 	};
 
 	const onConvertButtonClick = () => {
-		setTargetCurrencyValue(13);
+		// setTargetCurrencyValue(13);
+		currencyConversion.convert(100);
 	};
 
 	return (

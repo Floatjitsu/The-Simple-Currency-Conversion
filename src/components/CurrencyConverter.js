@@ -19,7 +19,6 @@ export default function CurrencyConverter() {
 		},
 
 		valueChange: function(value) {
-			// console.log('SOURCE VALUE: ' + value);
 			setSourceCurrencyValue(value);
 		}
 	};
@@ -30,12 +29,11 @@ export default function CurrencyConverter() {
 		},
 
 		valueChange: function(value) {
-			// console.log('TARGET VALUE: ' + value);
+			
 		}
 	};
 
 	const onConvertButtonClick = () => {
-		// setTargetCurrencyValue(13);
 		currencyConversion.convert(sourceCurrencyValue).then(result => setTargetCurrencyValue(result));
 	};
 

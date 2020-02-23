@@ -1,13 +1,14 @@
 import axios from 'axios';
 
 const _apiUrl = 'https://api.exchangeratesapi.io/latest';
-const _params = {params: { base: '', symbols: '' } };
 
+let _sourceCurrencyName = '';
+let _targetCurrencyName = '';
 let _conversionRate = 1;
 
 const initialize = (fromCurrency, toCurrency) => {
-	_setSourceCurrency(fromCurrency);
-	_setTargetCurrency(toCurrency);
+	setSourceCurrency(fromCurrency);
+	setTargetCurrency(toCurrency);
 };
 
 const convert = value => {
@@ -18,21 +19,30 @@ const convert = value => {
 
 const _setRate = () => {
 	return new Promise((resolve, reject) => {
-		axios.get(_apiUrl, _params)
+		axios.get(_apiUrl, _buildApiParams())
 			.then(response => {
-				_conversionRate = response.data.rates[_params.params.symbols];
+				_conversionRate = response.data.rates[_targetCurrencyName];
 				resolve(response);
 			})
 			.catch(error => reject(error));
 	});
 };
 
-const _setSourceCurrency = currencyName => {
-	_params.params.base = currencyName;
+const setSourceCurrency = currencyName => {
+	_sourceCurrencyName = currencyName;
 };
 
-const _setTargetCurrency = currencyName => {
-	_params.params.symbols = currencyName;
+const setTargetCurrency = currencyName => {
+	_targetCurrencyName = currencyName;
 };
 
-export default {initialize, convert};
+const _buildApiParams = () => {
+	return {
+		params: {
+			base: _sourceCurrencyName,
+			symbols: _targetCurrencyName
+		}
+	};
+}
+
+export default {initialize, convert, setSourceCurrency, setTargetCurrency};

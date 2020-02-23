@@ -15,7 +15,8 @@ export default function CurrencyConverter() {
 
 	const sourceCurrency = {
 		nameChange: function(currencyName) {
-			setSourceCurrencyName(currencyName);
+			// setSourceCurrencyName(currencyName);
+			currencyConversion.setSourceCurrency(currencyName);
 		},
 
 		valueChange: function(value) {
@@ -25,11 +26,12 @@ export default function CurrencyConverter() {
 
 	const targetCurrency = {
 		nameChange: function(currencyName) {
-			setTargetCurrencyName(currencyName);
+			// setTargetCurrencyName(currencyName);
+			currencyConversion.setTargetCurrency(currencyName);
 		},
 
 		valueChange: function(value) {
-			
+
 		}
 	};
 

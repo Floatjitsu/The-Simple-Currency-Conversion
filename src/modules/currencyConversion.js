@@ -13,18 +13,7 @@ const initialize = (fromCurrency, toCurrency) => {
 
 const convert = value => {
 	return new Promise((resolve, reject) => {
-		_setRate().then(result => resolve(_conversionRate * value));
-	});
-};
-
-const _setRate = () => {
-	return new Promise((resolve, reject) => {
-		axios.get(_apiUrl, _buildApiParams())
-			.then(response => {
-				_conversionRate = response.data.rates[_targetCurrencyName];
-				resolve(response);
-			})
-			.catch(error => reject(error));
+		_setConversionRate().then(result => resolve(_conversionRate * value));
 	});
 };
 
@@ -34,6 +23,17 @@ const setSourceCurrency = currencyName => {
 
 const setTargetCurrency = currencyName => {
 	_targetCurrencyName = currencyName;
+};
+
+const _setConversionRate = () => {
+	return new Promise((resolve, reject) => {
+		axios.get(_apiUrl, _buildApiParams())
+			.then(response => {
+				_conversionRate = response.data.rates[_targetCurrencyName];
+				resolve(response);
+			})
+			.catch(error => reject(error));
+	});
 };
 
 const _buildApiParams = () => {

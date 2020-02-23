@@ -16,7 +16,7 @@ export default function CurrencyConverter() {
 		},
 
 		valueChange: function(value) {
-			console.log('SOURCE VALUE: ' + value);
+			// console.log('SOURCE VALUE: ' + value);
 			setSourceCurrencyValue(value);
 		}
 	};
@@ -39,14 +39,14 @@ export default function CurrencyConverter() {
 		<div className='CurrencyConverter'>
 			<CurrencyInput
 				readOnly={false}
-				numberValue={sourceCurrencyValue}
+				currencyValue={sourceCurrencyValue}
 				defaultValue={'EUR'}
 				currencyNameInputChangeCallBack={sourceCurrency.nameChange}
 				currencyValueInputChangeCallBack={sourceCurrency.valueChange}/>
 			<div style={{marginTop: 10}}/>
 			<CurrencyInput
 				readOnly={true}
-				numberValue={targetCurrencyValue}
+				currencyValue={targetCurrencyValue}
 				defaultValue={'USD'}
 				currencyNameInputChangeCallBack={targetCurrency.nameChange}
 				currencyValueInputChangeCallBack={targetCurrency.valueChange}/>

@@ -5,16 +5,12 @@ import currencyConversion from '../modules/currencyConversion';
 
 export default function CurrencyConverter() {
 
-	const [sourceCurrencyName] = useState('EUR');
 	const [sourceCurrencyValue, setSourceCurrencyValue] = useState(1.00);
-
-	const [targetCurrencyName] = useState('USD');
 	const [targetCurrencyValue, setTargetCurrencyValue] = useState(1.00);
 
-	currencyConversion.initialize(sourceCurrencyName, targetCurrencyName);
-
 	useEffect(() => {
-		_convert();
+		 currencyConversion.initialize('EUR', 'USD');
+		 _convert();
 	}, []);
 
 	const sourceCurrency = {
@@ -30,10 +26,6 @@ export default function CurrencyConverter() {
 	const targetCurrency = {
 		nameChange: function(currencyName) {
 			currencyConversion.setTargetCurrency(currencyName);
-		},
-
-		valueChange: function(value) {
-
 		}
 	};
 
@@ -59,7 +51,7 @@ export default function CurrencyConverter() {
 				currencyValue={targetCurrencyValue}
 				defaultValue={'USD'}
 				currencyNameInputChangeCallBack={targetCurrency.nameChange}
-				currencyValueInputChangeCallBack={targetCurrency.valueChange}/>
+				currencyValueInputChangeCallBack={null}/>
 			<div style={{marginTop: 10}}/>
 			<Button
 				variant='contained'

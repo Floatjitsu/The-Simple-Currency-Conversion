@@ -20,9 +20,9 @@ export default function CurrencyInput(props) {
 			<Row>
 				<Col xs={3}>
 				 	<TextField
+						value={props.numberValue}
 						type='number'
-						variant='outlined'
-						defaultValue={'1.00'}
+						variant='outlined'						
 						inputProps={{readOnly: props.readOnly}}
 						onChange={onCurrencyValueInputChange}
             			fullWidth />

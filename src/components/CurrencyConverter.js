@@ -5,7 +5,10 @@ import Button from '@material-ui/core/Button';
 export default function CurrencyConverter() {
 
 	const [sourceCurrencyName, setSourceCurrencyName] = useState('EUR');
+	const [sourceCurrencyValue, setSourceCurrencyValue] = useState(1.00);
+
 	const [targetCurrencyName, setTargetCurrencyName] = useState('USD');
+	const [targetCurrencyValue, setTargetCurrencyValue] = useState(1.00);
 
 	const sourceCurrency = {
 		nameChange: function(currencyName) {
@@ -14,6 +17,7 @@ export default function CurrencyConverter() {
 
 		valueChange: function(value) {
 			console.log('SOURCE VALUE: ' + value);
+			setSourceCurrencyValue(value);
 		}
 	};
 
@@ -23,28 +27,35 @@ export default function CurrencyConverter() {
 		},
 
 		valueChange: function(value) {
-			console.log('TARGET VALUE: ' + value);
+			// console.log('TARGET VALUE: ' + value);
 		}
+	};
+
+	const onConvertButtonClick = () => {
+		setTargetCurrencyValue(13);
 	};
 
 	return (
 		<div className='CurrencyConverter'>
 			<CurrencyInput
 				readOnly={false}
-				defaultValue={sourceCurrencyName}
+				numberValue={sourceCurrencyValue}
+				defaultValue={'EUR'}
 				currencyNameInputChangeCallBack={sourceCurrency.nameChange}
 				currencyValueInputChangeCallBack={sourceCurrency.valueChange}/>
 			<div style={{marginTop: 10}}/>
 			<CurrencyInput
 				readOnly={true}
-				defaultValue={targetCurrencyName}
+				numberValue={targetCurrencyValue}
+				defaultValue={'USD'}
 				currencyNameInputChangeCallBack={targetCurrency.nameChange}
 				currencyValueInputChangeCallBack={targetCurrency.valueChange}/>
 			<div style={{marginTop: 10}}/>
 			<Button
 				variant='contained'
 				color='primary'
-				style={{marginRight: 15}}>
+				style={{marginRight: 15}}
+				onClick={onConvertButtonClick}>
 				Convert
 			</Button>
 		</div>

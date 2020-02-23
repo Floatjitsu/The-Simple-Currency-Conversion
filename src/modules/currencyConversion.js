@@ -12,14 +12,17 @@ const initialize = (fromCurrency, toCurrency) => {
 
 const convert = value => {
 	return new Promise((resolve, reject) => {
-		_setRate().then(result => console.log(result));
+		_setRate().then(result => resolve(_conversionRate * value));
 	});
 };
 
 const _setRate = () => {
 	return new Promise((resolve, reject) => {
 		axios.get(_apiUrl, _params)
-			.then(response => resolve(response))
+			.then(response => {
+				_conversionRate = response.data.rates[_params.params.symbols];
+				resolve(response);
+			})
 			.catch(error => reject(error));
 	});
 };

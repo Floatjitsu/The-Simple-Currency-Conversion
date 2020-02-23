@@ -36,7 +36,7 @@ export default function CurrencyConverter() {
 
 	const onConvertButtonClick = () => {
 		// setTargetCurrencyValue(13);
-		currencyConversion.convert(100);
+		currencyConversion.convert(sourceCurrencyValue).then(result => setTargetCurrencyValue(result));
 	};
 
 	return (

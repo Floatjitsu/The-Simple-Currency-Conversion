@@ -16,6 +16,7 @@ export default function HeaderBar() {
 				src={logo}
 				width='30'
 				height='30'
+				style={{marginRight: 10}}
 				className="d-inline-block align-top"
         		alt={appTitle} />
 				{appTitle}

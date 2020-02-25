@@ -13,7 +13,7 @@ const initialize = (fromCurrency, toCurrency) => {
 
 const convert = value => {
 	return new Promise((resolve, reject) => {
-		_setConversionRate().then(result => resolve(_calculateConvertedValue(value)));
+		_setConversionRate().then(result => resolve(_buildFrontendData(value)));
 	});
 };
 
@@ -42,6 +42,13 @@ const _buildApiParams = () => {
 			base: _sourceCurrencyName,
 			symbols: _targetCurrencyName
 		}
+	};
+};
+
+const _buildFrontendData = value => {
+	return {
+		convertedValue: _calculateConvertedValue(value),
+		exchangeRate: _conversionRate
 	};
 };
 

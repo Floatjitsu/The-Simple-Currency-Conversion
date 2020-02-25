@@ -35,7 +35,10 @@ export default function CurrencyConverter() {
 	};
 
 	const _convert = () => {
-		currencyConversion.convert(sourceCurrencyValue).then(result => setTargetCurrencyValue(result));
+		currencyConversion.convert(sourceCurrencyValue).then(result => {
+			setTargetCurrencyValue(result.convertedValue);
+			setExchangeRate(result.exchangeRate)
+		});
 	};
 
 	return (

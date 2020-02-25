@@ -7,6 +7,7 @@ export default function CurrencyConverter() {
 
 	const [sourceCurrencyValue, setSourceCurrencyValue] = useState(1.00);
 	const [targetCurrencyValue, setTargetCurrencyValue] = useState(1.00);
+	const [exchangeRate, setExchangeRate] = useState(0.42);
 
 	useEffect(() => {
 		 currencyConversion.initialize('EUR', 'USD');
@@ -53,13 +54,18 @@ export default function CurrencyConverter() {
 				currencyNameInputChangeCallBack={targetCurrency.nameChange}
 				currencyValueInputChangeCallBack={null}/>
 			<div style={{marginTop: 10}}/>
-			<Button
-				variant='contained'
-				color='primary'
-				style={{marginRight: 15}}
-				onClick={onConvertButtonClick}>
-				Convert
-			</Button>
+			<div className='ButtonAndCourseContainer'>
+				<p style={{marginLeft: 15}}>
+					Rate: {exchangeRate}
+				</p>
+				<Button
+					variant='contained'
+					color='primary'
+					style={{marginRight: 15}}
+					onClick={onConvertButtonClick}>
+					Convert
+				</Button>
+			</div>
 		</div>
 	);
 };

@@ -5,13 +5,21 @@
 .CurrencyConverter {
     display: inline-flex;
     flex-direction: column;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     align-content: stretch;
     margin-top: 10px;
     width: 30%;
 }
 
 .CurrencyInput {
+}
+
+.ButtonAndCourseContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: grey;
+    font-size: 14px;
 }
 
 /* To hide arrows in number input */

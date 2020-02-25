@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import HeaderBar from './components/HeaderBar';
 import CurrencyConverter from './components/CurrencyConverter';

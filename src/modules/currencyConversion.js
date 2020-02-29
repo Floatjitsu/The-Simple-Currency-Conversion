@@ -47,13 +47,16 @@ const _buildApiParams = () => {
 
 const _buildFrontendData = value => {
 	return {
+		// convertedValue: value,
 		convertedValue: _calculateConvertedValue(value),
 		exchangeRate: _conversionRate
 	};
 };
 
 const _calculateConvertedValue = value => {
-	return Math.round((value * _conversionRate) * 100) / 100;
+	console.log(value * _conversionRate);
+	return (value * _conversionRate).toFixed(3);
+	// return Math.round((value * _conversionRate) * 100) / 100;
 };
 
 export default {initialize, convert, setSourceCurrency, setTargetCurrency};

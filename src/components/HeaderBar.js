@@ -21,7 +21,10 @@ export default function HeaderBar() {
         		alt={appTitle} />
 				{appTitle}
 		  </Navbar.Brand>
-		  <Nav className='mr-auto'>
+		  <Nav className='ml-auto'>
+		  	<Link to='/comparison'>
+				<Nav.Link href='#comparison'>Comparison</Nav.Link>
+			</Link>
 			<Link to='/about'>
 				<Nav.Link href='#about'>About</Nav.Link>
 			</Link>

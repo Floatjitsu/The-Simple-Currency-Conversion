@@ -1,10 +1,24 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import CurrencyInput from './CurrencyInput';
 import Button from '@material-ui/core/Button';
+import currencyComparison from '../modules/currencyComparison';
 
-function CurrencyComparison() {
+const initialNameValues = {
+	base: 'EUR',
+	first: 'USD',
+	second: 'CAD',
+	third: 'DKK'
+
+}
+
+function CurrencyComparator() {
 
 	const [sourceCurrencyValue, setSourceCurrencyValue] = useState(1.00);
+
+	useEffect(() => {
+		 currencyComparison.initialize('EUR', initialNameValues);
+		 // _convert();
+	}, []);
 
 	const sourceCurrency = {
 		nameChange: function(currencyName) {
@@ -25,28 +39,28 @@ function CurrencyComparison() {
 				<CurrencyInput
 					readOnly={false}
 					currencyValue={sourceCurrencyValue}
-					defaultValue={'EUR'}
+					defaultValue={initialNameValues.base}
 					currencyNameInputChangeCallBack={sourceCurrency.nameChange}
 					currencyValueInputChangeCallBack={sourceCurrency.valueChange}/>
 				<div className='ComparedCurrencies'>
 					<CurrencyInput
 						readOnly={true}
 						currencyValue={1}
-						defaultValue={'EUR'}
+						defaultValue={initialNameValues.first}
 						currencyNameInputChangeCallBack={null}
 						currencyValueInputChangeCallBack={null}/>
 					<div style={{marginTop:10}}/>
 					<CurrencyInput
 						readOnly={true}
 						currencyValue={1}
-						defaultValue={'EUR'}
+						defaultValue={initialNameValues.second}
 						currencyNameInputChangeCallBack={null}
 						currencyValueInputChangeCallBack={null}/>
 					<div style={{marginTop:10}}/>
 					<CurrencyInput
 						readOnly={true}
 						currencyValue={1}
-						defaultValue={'EUR'}
+						defaultValue={initialNameValues.third}
 						currencyNameInputChangeCallBack={null}
 						currencyValueInputChangeCallBack={null}/>
 					<div style={{marginTop:10}}/>
@@ -64,4 +78,4 @@ function CurrencyComparison() {
 	);
 }
 
-export default CurrencyComparison;
+export default CurrencyComparator;

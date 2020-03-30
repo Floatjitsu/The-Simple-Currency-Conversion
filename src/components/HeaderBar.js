@@ -22,8 +22,8 @@ export default function HeaderBar() {
 				{appTitle}
 		  </Navbar.Brand>
 		  <Nav className='ml-auto'>
-		  	<Link to='/comparison'>
-				<Nav.Link href='#comparison'>Comparison</Nav.Link>
+		  	<Link to='/comparator'>
+				<Nav.Link href='#comparator'>Comparator</Nav.Link>
 			</Link>
 			<Link to='/about'>
 				<Nav.Link href='#about'>About</Nav.Link>

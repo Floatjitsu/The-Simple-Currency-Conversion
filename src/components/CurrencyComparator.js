@@ -13,10 +13,11 @@ const initialNameValues = {
 function CurrencyComparator() {
 
 	const [sourceCurrencyValue, setSourceCurrencyValue] = useState(1.00);
+	const [firstCurrencyValue, setFirstCurrencyValue] = useState(1.00);
 
 	useEffect(() => {
-		 currencyComparison.initialize('EUR', initialNameValues);
-		 // _convert();
+		 currencyComparison.initialize(initialNameValues.base, initialNameValues);
+		 _convert();
 	}, []);
 
 	const sourceCurrency = {
@@ -28,6 +29,12 @@ function CurrencyComparator() {
 			setSourceCurrencyValue(currencyValue);
 		}
 	}
+
+	const _convert = () => {
+		currencyComparison.convert.then(result => {
+			setFirstCurrencyValue(result.first.conversionRate * sourceCurrencyValue)
+		});
+	};
 
 	return (
 		<div style={{display:'inline-flex', flexDirection:'column'}}>
@@ -44,7 +51,7 @@ function CurrencyComparator() {
 				<div className='ComparedCurrencies'>
 					<CurrencyInput
 						readOnly={true}
-						currencyValue={1}
+						currencyValue={firstCurrencyValue}
 						defaultValue={initialNameValues.first}
 						currencyNameInputChangeCallBack={null}
 						currencyValueInputChangeCallBack={null}/>

@@ -48,7 +48,7 @@ const _buildApiParams = () => {
 const _buildFrontendData = value => {
 	return {
 		convertedValue: _calculateConvertedValue(value),
-		exchangeRate: _conversionRate
+		exchangeRate: _conversionRate.toFixed(4)
 	};
 };
 

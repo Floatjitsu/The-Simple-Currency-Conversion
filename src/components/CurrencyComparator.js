@@ -8,8 +8,7 @@ const initialNameValues = {
 	first: 'USD',
 	second: 'CAD',
 	third: 'DKK'
-
-}
+};
 
 function CurrencyComparator() {
 

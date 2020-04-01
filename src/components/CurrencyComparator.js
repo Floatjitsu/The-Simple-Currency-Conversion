@@ -39,10 +39,14 @@ function CurrencyComparator() {
 
 	const _convert = () => {
 		currencyComparison.convert().then(result => {
-			setFirstCurrencyValue((result.first.conversionRate * sourceCurrencyValue).toFixed(2));
-			setSecondCurrencyValue((result.second.conversionRate * sourceCurrencyValue).toFixed(2));
-			setThirdCurrencyValue((result.third.conversionRate * sourceCurrencyValue).toFixed(2));
-		}).catch(err => console.log(err));
+			setFirstCurrencyValue(_formatCurrencyResultValue(result.first.conversionRate * sourceCurrencyValue));
+			setSecondCurrencyValue(_formatCurrencyResultValue(result.second.conversionRate * sourceCurrencyValue));
+			setThirdCurrencyValue(_formatCurrencyResultValue(result.third.conversionRate * sourceCurrencyValue));
+		});
+	};
+
+	const _formatCurrencyResultValue = value => {
+		return value.toFixed(2);
 	};
 
 	return (

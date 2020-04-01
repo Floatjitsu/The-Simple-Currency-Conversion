@@ -25,6 +25,7 @@ function CurrencyComparator() {
 	const sourceCurrency = {
 		nameChange: function(currencyName) {
 			console.log(currencyName);
+			currencyComparison.setBaseCurrencyName(currencyName);
 		},
 
 		valueChange: function(currencyValue) {
@@ -32,12 +33,16 @@ function CurrencyComparator() {
 		}
 	}
 
+	const onCompareButtonClick = () => {
+		_convert();
+	};
+
 	const _convert = () => {
-		currencyComparison.convert.then(result => {
+		currencyComparison.convert().then(result => {
 			setFirstCurrencyValue((result.first.conversionRate * sourceCurrencyValue).toFixed(2));
 			setSecondCurrencyValue((result.second.conversionRate * sourceCurrencyValue).toFixed(2));
 			setThirdCurrencyValue((result.third.conversionRate * sourceCurrencyValue).toFixed(2));
-		});
+		}).catch(err => console.log(err));
 	};
 
 	return (
@@ -80,7 +85,8 @@ function CurrencyComparator() {
 				<Button
 					variant='contained'
 					color='primary'
-					style={{marginRight: 15}}>
+					style={{marginRight: 15}}
+					onClick={onCompareButtonClick}>
 					Compare
 				</Button>
 			</div>

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const _apiUrl = ' https://api.exchangeratesapi.io/latest';
+const _apiUrl = 'https://api.exchangeratesapi.io/latest';
 
 let _baseCurrencyName = '';
 
@@ -47,9 +47,11 @@ const _getRatesForBaseCurrency = () => {
 	});
 };
 
-const convert = new Promise((resolve, reject) => {
-	_getRatesForBaseCurrency().then(() => resolve(_sourceCurrencies));
-});
+const convert = () => {
+	return new Promise((resolve, reject) => {
+		_getRatesForBaseCurrency().then(() => resolve(_sourceCurrencies));
+	});
+};
 
 const _setSourceCurrenciesConversionRates = () => {
 	_sourceCurrencies.first.conversionRate = _rates[_sourceCurrencies.first.name];
@@ -57,4 +59,8 @@ const _setSourceCurrenciesConversionRates = () => {
 	_sourceCurrencies.third.conversionRate = _rates[_sourceCurrencies.third.name];
 };
 
-export default {initialize, convert};
+const setBaseCurrencyName = baseCurrencyName => {
+	_baseCurrencyName = baseCurrencyName;
+};
+
+export default {initialize, convert, setBaseCurrencyName};

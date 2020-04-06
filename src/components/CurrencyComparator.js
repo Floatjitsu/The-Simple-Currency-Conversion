@@ -12,7 +12,7 @@ const initialNameValues = {
 
 function CurrencyComparator() {
 
-	const [sourceCurrencyValue, setSourceCurrencyValue] = useState(1.00);
+	const [baseCurrencyValue, setBaseCurrencyValue] = useState(1.00);
 	const [firstCurrencyValue, setFirstCurrencyValue] = useState(1.00);
 	const [secondCurrencyValue, setSecondCurrencyValue] = useState(1.00);
 	const [thirdCurrencyValue, setThirdCurrencyValue] = useState(1.00);
@@ -29,7 +29,7 @@ function CurrencyComparator() {
 		},
 
 		valueChange: function(currencyValue) {
-			setSourceCurrencyValue(currencyValue);
+			setBaseCurrencyValue(currencyValue);
 		}
 	}
 
@@ -39,10 +39,14 @@ function CurrencyComparator() {
 
 	const _convert = () => {
 		currencyComparison.convert().then(result => {
-			setFirstCurrencyValue(_formatCurrencyResultValue(result.first.conversionRate * sourceCurrencyValue));
-			setSecondCurrencyValue(_formatCurrencyResultValue(result.second.conversionRate * sourceCurrencyValue));
-			setThirdCurrencyValue(_formatCurrencyResultValue(result.third.conversionRate * sourceCurrencyValue));
+			setFirstCurrencyValue(_formatCurrencyResultValue(result.first.conversionRate * baseCurrencyValue));
+			setSecondCurrencyValue(_formatCurrencyResultValue(result.second.conversionRate * baseCurrencyValue));
+			setThirdCurrencyValue(_formatCurrencyResultValue(result.third.conversionRate * baseCurrencyValue));
 		});
+	};
+
+	const _setSourceCurrenciesValuesOnBasValueChange = () => {
+		setFirstCurrencyValue()
 	};
 
 	const _formatCurrencyResultValue = value => {
@@ -57,7 +61,7 @@ function CurrencyComparator() {
 			<div className='CurrencyComparison'>
 				<CurrencyInput
 					readOnly={false}
-					currencyValue={sourceCurrencyValue}
+					currencyValue={baseCurrencyValue}
 					defaultValue={initialNameValues.base}
 					currencyNameInputChangeCallBack={sourceCurrency.nameChange}
 					currencyValueInputChangeCallBack={sourceCurrency.valueChange}/>

@@ -24,7 +24,6 @@ function CurrencyComparator() {
 
 	const sourceCurrency = {
 		nameChange: function(currencyName) {
-			console.log(currencyName);
 			currencyComparison.setBaseCurrencyName(currencyName);
 		},
 
@@ -43,10 +42,6 @@ function CurrencyComparator() {
 			setSecondCurrencyValue(_formatCurrencyResultValue(result.second.conversionRate * baseCurrencyValue));
 			setThirdCurrencyValue(_formatCurrencyResultValue(result.third.conversionRate * baseCurrencyValue));
 		});
-	};
-
-	const _setSourceCurrenciesValuesOnBasValueChange = () => {
-		setFirstCurrencyValue()
 	};
 
 	const _formatCurrencyResultValue = value => {

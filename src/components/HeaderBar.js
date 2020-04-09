@@ -25,6 +25,9 @@ export default function HeaderBar() {
 		  	<Link to='/comparator'>
 				<Nav.Link href='#comparator'>Comparator</Nav.Link>
 			</Link>
+			<Link to='/currencies'>
+				<Nav.Link href='#currencies'>Currencies</Nav.Link>
+			</Link>
 			<Link to='/about'>
 				<Nav.Link href='#about'>About</Nav.Link>
 			</Link>

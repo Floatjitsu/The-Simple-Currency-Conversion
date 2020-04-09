@@ -20,7 +20,7 @@
   {
     "symbol": "â¬",
     "name": "Euro",
-    "symbol_native": "â¬",
+    "symbol_native": "€",
     "decimal_digits": 2,
     "rounding": 0,
     "code": "EUR",
@@ -29,7 +29,7 @@
   {
     "symbol": "BGN",
     "name": "Bulgarian Lev",
-    "symbol_native": "Ð»Ð².",
+    "symbol_native": "лв",
     "decimal_digits": 2,
     "rounding": 0,
     "code": "BGN",
@@ -38,7 +38,7 @@
   {
     "symbol": "Â¥",
     "name": "Japanese Yen",
-    "symbol_native": "ï¿¥",
+    "symbol_native": "¥",
     "decimal_digits": 0,
     "rounding": 0,
     "code": "JPY",
@@ -47,7 +47,7 @@
   {
     "symbol": "KÄ",
     "name": "Czech Republic Koruna",
-    "symbol_native": "KÄ",
+    "symbol_native": "Kč",
     "decimal_digits": 2,
     "rounding": 0,
     "code": "CZK",
@@ -65,7 +65,7 @@
   {
     "symbol": "Â£",
     "name": "British Pound Sterling",
-    "symbol_native": "Â£",
+    "symbol_native": "£",
     "decimal_digits": 2,
     "rounding": 0,
     "code": "GBP",
@@ -83,7 +83,7 @@
   {
     "symbol": "zÅ",
     "name": "Polish Zloty",
-    "symbol_native": "zÅ",
+    "symbol_native": "Zł",
     "decimal_digits": 2,
     "rounding": 0,
     "code": "PLN",
@@ -92,7 +92,7 @@
   {
     "symbol": "RON",
     "name": "Romanian Leu",
-    "symbol_native": "RON",
+    "symbol_native": "l",
     "decimal_digits": 2,
     "rounding": 0,
     "code": "RON",
@@ -146,7 +146,7 @@
   {
     "symbol": "RUB",
     "name": "Russian Ruble",
-    "symbol_native": "â½.",
+    "symbol_native": "₽",
     "decimal_digits": 2,
     "rounding": 0,
     "code": "RUB",
@@ -182,7 +182,7 @@
   {
     "symbol": "CNÂ¥",
     "name": "Chinese Yuan",
-    "symbol_native": "CNÂ¥",
+    "symbol_native": "元",
     "decimal_digits": 2,
     "rounding": 0,
     "code": "CNY",
@@ -209,7 +209,7 @@
   {
     "symbol": "âª",
     "name": "Israeli New Sheqel",
-    "symbol_native": "âª",
+    "symbol_native": "ש",
     "decimal_digits": 2,
     "rounding": 0,
     "code": "ILS",
@@ -218,7 +218,7 @@
   {
     "symbol": "Rs",
     "name": "Indian Rupee",
-    "symbol_native": "à¦à¦à¦¾",
+    "symbol_native": "₹",
     "decimal_digits": 2,
     "rounding": 0,
     "code": "INR",
@@ -227,7 +227,7 @@
   {
     "symbol": "â©",
     "name": "South Korean Won",
-    "symbol_native": "â©",
+    "symbol_native": "₩",
     "decimal_digits": 0,
     "rounding": 0,
     "code": "KRW",
@@ -263,7 +263,7 @@
   {
     "symbol": "â±",
     "name": "Philippine Peso",
-    "symbol_native": "â±",
+    "symbol_native": "₱",
     "decimal_digits": 2,
     "rounding": 0,
     "code": "PHP",
@@ -281,7 +281,7 @@
   {
     "symbol": "à¸¿",
     "name": "Thai Baht",
-    "symbol_native": "à¸¿",
+    "symbol_native": "฿",
     "decimal_digits": 2,
     "rounding": 0,
     "code": "THB",

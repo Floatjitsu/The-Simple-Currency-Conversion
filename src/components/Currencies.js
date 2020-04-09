@@ -9,7 +9,7 @@ function CurrencyItem(props) {
 	return (
 		<tr>
 			<td> {currencyNumber++} </td>
-			<td> <img src={props.value.flag_path} width='50' height='35' alt={props.value.country}/></td>
+			<td> <img src={props.value.flag_path} width='50' height='30' alt={props.value.country}/> </td>
 			<td> {props.value.name} </td>
 			<td> {props.value.symbol_native} </td>
 		</tr>

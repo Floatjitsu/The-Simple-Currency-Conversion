@@ -43,6 +43,16 @@
     width: 100%;
 }
 
+.CurrenciesTitleText {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.CurrenciesList {
+    margin:auto;
+    width: 40%;
+}
+
 .aboutList {
     display: flex;
     justify-content: center;

@@ -6,7 +6,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "USD",
-    "name_plural": "US dollars"
+    "name_plural": "US dollars",
+    "country": "USA",
+    "flag_path": "/images/united-states-of-america-flag.svg"
   },
   {
     "symbol": "CA$",
@@ -15,7 +17,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "CAD",
-    "name_plural": "Canadian dollars"
+    "name_plural": "Canadian dollars",
+    "country": "Canada",
+    "flag_path": "/images/canada-flag.svg"
   },
   {
     "symbol": "â¬",
@@ -24,7 +28,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "EUR",
-    "name_plural": "euros"
+    "name_plural": "euros",
+    "country": "Europe",
+    "flag_path": "/images/europe-flag.svg"
   },
   {
     "symbol": "BGN",
@@ -33,7 +39,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "BGN",
-    "name_plural": "Bulgarian leva"
+    "name_plural": "Bulgarian leva",
+    "country": "Bulgaria",
+    "flag_path": "/images/bulgaria-flag.svg"
   },
   {
     "symbol": "Â¥",
@@ -42,7 +50,9 @@
     "decimal_digits": 0,
     "rounding": 0,
     "code": "JPY",
-    "name_plural": "Japanese yen"
+    "name_plural": "Japanese yen",
+    "country": "Japan",
+    "flag_path": "/images/japan-flag.svg"
   },
   {
     "symbol": "KÄ",
@@ -51,7 +61,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "CZK",
-    "name_plural": "Czech Republic korunas"
+    "name_plural": "Czech Republic korunas",
+    "country": "Czech Republic",
+    "flag_path": "/images/czech-republic-flag.svg"
   },
   {
     "symbol": "Dkr",
@@ -60,7 +72,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "DKK",
-    "name_plural": "Danish kroner"
+    "name_plural": "Danish kroner",
+    "country": "Denmark",
+    "flag_path": "/images/denmark-flag.svg"
   },
   {
     "symbol": "Â£",
@@ -69,7 +83,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "GBP",
-    "name_plural": "British pounds sterling"
+    "name_plural": "British pounds sterling",
+    "country": "Great Britian",
+    "flag_path": "/images/united-kingdomn-flag.svg"
   },
   {
     "symbol": "Ft",
@@ -78,7 +94,9 @@
     "decimal_digits": 0,
     "rounding": 0,
     "code": "HUF",
-    "name_plural": "Hungarian forints"
+    "name_plural": "Hungarian forints",
+    "country": "Hungary",
+    "flag_path": "/images/hungary-flag.svg"
   },
   {
     "symbol": "zÅ",
@@ -87,7 +105,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "PLN",
-    "name_plural": "Polish zlotys"
+    "name_plural": "Polish zlotys",
+    "country": "Poland",
+    "flag_path": "/images/poland-flag.svg"
   },
   {
     "symbol": "RON",
@@ -96,7 +116,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "RON",
-    "name_plural": "Romanian lei"
+    "name_plural": "Romanian lei",
+    "country": "Romania",
+    "flag_path": "/images/romania-flag.svg"
   },
   {
     "symbol": "Skr",
@@ -105,7 +127,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "SEK",
-    "name_plural": "Swedish kronor"
+    "name_plural": "Swedish kronor",
+    "country": "Sweden",
+    "flag_path": "/images/sweden-flag.svg"
   },
   {
     "symbol": "CHF",
@@ -114,7 +138,9 @@
     "decimal_digits": 2,
     "rounding": 0.05,
     "code": "CHF",
-    "name_plural": "Swiss francs"
+    "name_plural": "Swiss francs",
+    "country": "Switzerland",
+    "flag_path": "/images/switzerland-flag.svg"
   },
   {
     "symbol": "Ikr",
@@ -123,7 +149,9 @@
     "decimal_digits": 0,
     "rounding": 0,
     "code": "ISK",
-    "name_plural": "Icelandic krÃ³nur"
+    "name_plural": "Icelandic krÃ³nur",
+    "country": "Iceland",
+    "flag_path": "/images/iceland-flag.svg"
   },
   {
     "symbol": "Nkr",
@@ -132,7 +160,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "NOK",
-    "name_plural": "Norwegian kroner"
+    "name_plural": "Norwegian kroner",
+    "country": "Norway",
+    "flag_path": "/images/norway-flag.svg"
   },
   {
     "symbol": "kn",
@@ -141,7 +171,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "HRK",
-    "name_plural": "Croatian kunas"
+    "name_plural": "Croatian kunas",
+    "country": "Croatia",
+    "flag_path": "/images/croatia-flag.svg"
   },
   {
     "symbol": "RUB",
@@ -150,7 +182,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "RUB",
-    "name_plural": "Russian rubles"
+    "name_plural": "Russian rubles",
+    "country": "Russia",
+    "flag_path": "/images/russia-flag.svg"
   },
   {
     "symbol": "TL",
@@ -159,7 +193,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "TRY",
-    "name_plural": "Turkish Lira"
+    "name_plural": "Turkish Lira",
+    "country": "Turkey",
+    "flag_path": "/images/turkey-flag.svg"
   },
   {
     "symbol": "AU$",
@@ -168,7 +204,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "AUD",
-    "name_plural": "Australian dollars"
+    "name_plural": "Australian dollars",
+    "country": "Australia",
+    "flag_path": "/images/australia-flag.svg"
   },
   {
     "symbol": "R$",
@@ -177,7 +215,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "BRL",
-    "name_plural": "Brazilian reals"
+    "name_plural": "Brazilian reals",
+    "country": "Brazil",
+    "flag_path": "/images/brazil-flag.svg"
   },
   {
     "symbol": "CNÂ¥",
@@ -186,7 +226,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "CNY",
-    "name_plural": "Chinese yuan"
+    "name_plural": "Chinese yuan",
+    "country": "China",
+    "flag_path": "/images/china-flag.svg"
   },
   {
     "symbol": "HK$",
@@ -195,7 +237,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "HKD",
-    "name_plural": "Hong Kong dollars"
+    "name_plural": "Hong Kong dollars",
+    "country": "Hong Kong",
+    "flag_path": "/images/hong-kong-flag.svg"
   },
   {
     "symbol": "Rp",
@@ -204,7 +248,9 @@
     "decimal_digits": 0,
     "rounding": 0,
     "code": "IDR",
-    "name_plural": "Indonesian rupiahs"
+    "name_plural": "Indonesian rupiahs",
+    "country": "Indonesia",
+    "flag_path": "/images/indonesia-flag.svg"
   },
   {
     "symbol": "âª",
@@ -213,7 +259,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "ILS",
-    "name_plural": "Israeli new sheqels"
+    "name_plural": "Israeli new sheqels",
+    "country": "Israel",
+    "flag_path": "/images/israel-flag.svg"
   },
   {
     "symbol": "Rs",
@@ -222,7 +270,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "INR",
-    "name_plural": "Indian rupees"
+    "name_plural": "Indian rupees",
+    "country": "India",
+    "flag_path": "/images/india-flag.svg"
   },
   {
     "symbol": "â©",
@@ -231,7 +281,9 @@
     "decimal_digits": 0,
     "rounding": 0,
     "code": "KRW",
-    "name_plural": "South Korean won"
+    "name_plural": "South Korean won",
+    "country": "South Korea",
+    "flag_path": "/images/south-korea-flag.svg"
   },
   {
     "symbol": "MX$",
@@ -240,7 +292,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "MXN",
-    "name_plural": "Mexican pesos"
+    "name_plural": "Mexican pesos",
+    "country": "Mexico",
+    "flag_path": "/images/mexico-flag.svg"
   },
   {
     "symbol": "RM",
@@ -249,7 +303,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "MYR",
-    "name_plural": "Malaysian ringgits"
+    "name_plural": "Malaysian ringgits",
+    "country": "Malaysia",
+    "flag_path": "/images/malaysia-flag.svg"
   },
   {
     "symbol": "NZ$",
@@ -258,7 +314,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "NZD",
-    "name_plural": "New Zealand dollars"
+    "name_plural": "New Zealand dollars",
+    "country": "New Zealand",
+    "flag_path": "/images/new-zealand-flag.svg"
   },
   {
     "symbol": "â±",
@@ -267,7 +325,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "PHP",
-    "name_plural": "Philippine pesos"
+    "name_plural": "Philippine pesos",
+    "country": "Philippines",
+    "flag_path": "/images/philippines-flag.svg"
   },
   {
     "symbol": "S$",
@@ -276,7 +336,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "SGD",
-    "name_plural": "Singapore dollars"
+    "name_plural": "Singapore dollars",
+    "country": "Singapore",
+    "flag_path": "/images/singapore-flag.svg"
   },
   {
     "symbol": "à¸¿",
@@ -285,7 +347,9 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "THB",
-    "name_plural": "Thai baht"
+    "name_plural": "Thai baht",
+    "country": "Thailand",
+    "flag_path": "/images/thailand-flag.svg"
   },
   {
     "symbol": "R",
@@ -294,6 +358,8 @@
     "decimal_digits": 2,
     "rounding": 0,
     "code": "ZAR",
-    "name_plural": "South African rand"
+    "name_plural": "South African rand",
+    "country": "South Africa",
+    "flag_path": "/images/south-africa-flag.svg"
   }
 ]

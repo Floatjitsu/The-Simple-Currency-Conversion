@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import currencies from '../data/currencies';
 import ListGroup from 'react-bootstrap/ListGroup';
-import Table from 'react-bootstrap/Table'
+import Table from 'react-bootstrap/Table';
 
 let currencyNumber = 1;
 
@@ -9,7 +9,7 @@ function CurrencyItem(props) {
 	return (
 		<tr>
 			<td> {currencyNumber++} </td>
-			<td> </td>
+			<td> <img src='/images/iceland-flag.png' width='50' height='30' alt='Exchange Rates API'/></td>
 			<td> {props.value.name} </td>
 			<td> {props.value.symbol_native} </td>
 		</tr>
